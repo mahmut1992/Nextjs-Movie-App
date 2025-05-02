@@ -1,36 +1,103 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🎬 MovieApp – TMDB Movie Explorer with Next.js
 
-## Getting Started
+🔗 **MovieApp is a modern movie exploration application built with Next.js 13 and powered by The Movie Database (TMDB) API.**  
+It allows users to browse popular, upcoming, and trending movies with dynamic detail pages, real-time search, and responsive design.
 
-First, run the development server:
+---
+
+## 🚀 Features
+
+- 📡 Fetches movie data from **TMDB REST API**
+- 🔀 Dynamic routing and parameterized detail pages with **Next.js 13 App Router**
+- 🔍 Search functionality with real-time filtering
+- 🎨 Responsive UI using **Tailwind CSS**
+- 🌗 Light/Dark mode toggle with **next-themes**
+- ⚡ Automatic revalidation and data caching with `next: { revalidate }`
+- 🧭 Clean navigation with URL-based genre filters
+
+---
+
+## 🛠️ Technologies Used
+
+- **Next.js 13** (App Router)
+- **React 18**
+- **Tailwind CSS**
+- **React Icons**
+- **next-themes**
+- **TMDB API**
+
+---
+
+## 📁 Project Structure
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+movieapp/
+├── app/
+│   ├── page.jsx             # Homepage with movie listings
+│   ├── [id]/page.jsx        # Dynamic detail pages by movie ID
+│   └── layout.jsx           # Global layout and theme wrapper
+├── components/
+│   ├── Header.jsx
+│   ├── ThemeComp.jsx
+│   ├── Tabs.jsx
+│   └── Movies.jsx
+├── public/
+├── styles/
+├── .env.local               # API key stored securely
+├── tailwind.config.js
+├── package.json
+└── README.md
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## 🌐 Environment Variables
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+To run this project, create a `.env.local` file in the root directory and add the following:
 
-## Learn More
+```env
+NEXT_PUBLIC_TMDB_API_KEY=your_tmdb_v3_api_key_here
+# or if using v4
+NEXT_PUBLIC_TMDB_TOKEN=your_tmdb_bearer_token_here
+```
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🧪 Getting Started
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+```bash
+# 1. Install dependencies
+npm install
 
-## Deploy on Vercel
+# 2. Start development server
+npm run dev
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+# 3. Build for production
+npm run build
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+---
+
+## 📸 Screenshots
+
+https://github.com/user-attachments/assets/27d12757-50bf-4e10-a5cd-4ec886a5183e
+
+---
+
+## 📝 Project Purpose
+
+This project was built using **Next.js 13** to interact with **TMDB API** and dynamically render movie categories such as *popular*, *upcoming*, and *trending*.  
+Thanks to successful API requests and a responsive UI design, users can browse, view details by ID from URL parameters, and navigate between pages using the App Router.  
+Additionally, a search filter has been developed based on input to allow users to find movies dynamically.
+
+---
+
+## 📩 Contact
+
+For questions, suggestions, or collaboration:
+
+📧 **fratsbht@icloud.com**
+
+---
+
+> © 2025 MovieApp • Built with ❤️ using Next.js + TMDB API
